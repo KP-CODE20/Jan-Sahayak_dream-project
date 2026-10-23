@@ -1,0 +1,6 @@
+{
+  "name": "Jan Sahayak",
+  "description": "AI-Powered Banking Form Assistant — Helping people understand, fill, verify, and complete difficult bank forms without needing assistance from bank staff.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

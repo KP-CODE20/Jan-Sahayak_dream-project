@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-handwriting-neat {
+    font-family: 'Kalam', 'Noto Sans Devanagari', cursive, sans-serif;
+  }
+  .font-handwriting-simple {
+    font-family: 'Patrick Hand', 'Noto Sans Devanagari', cursive, sans-serif;
+  }
+  .font-handwriting-formal {
+    font-family: 'Caveat', 'Noto Sans Devanagari', cursive, sans-serif;
+  }
+}
+
+.print-only {
+  display: none;
+}
+
+.pdf-export-capture-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 820px;
+  opacity: 0;
+  pointer-events: none;
+  z-index: -9999;
+}
+
+@media print {
+  body {
+    background: white !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .pdf-export-capture-container {
+    position: static !important;
+    width: 100% !important;
+    opacity: 1 !important;
+    z-index: auto !important;
+    pointer-events: auto !important;
+    display: block !important;
+  }
+  #printable-form-canvas {
+    border: 2px solid #0f172a !important;
+    box-shadow: none !important;
+    transform: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 1.5rem !important;
+    margin: 0 auto !important;
+  }
+}
